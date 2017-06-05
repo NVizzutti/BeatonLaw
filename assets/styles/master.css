@@ -1,0 +1,9 @@
+.color-content {
+  color: white;
+  background: blue;
+}
+
+#navbar {
+  vertical-align: middle;
+  height: 75px;
+}
