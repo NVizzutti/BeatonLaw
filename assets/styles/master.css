@@ -3,7 +3,19 @@
   background: blue;
 }
 
+#dropdown {
+  margin: 10px;
+}
+
+#logo {
+  text-align: center;
+  display:  inline-block;
+  margin: 10px;
+}
+
 #navbar {
+  display: flex;
+  justify-content: space-between;
   vertical-align: middle;
   height: 75px;
 }
