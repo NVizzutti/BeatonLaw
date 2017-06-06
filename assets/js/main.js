@@ -1,14 +1,20 @@
+window.menuOpen = false;
 $('#dropdown').on('mouseover', (e) => {
+  console.log(window.menuOpen);
   $('#menu-items').css('visibility', 'visible');
-  var leftPosition = parseInt($('#menu-items')[0].style.left)
-  console.log(leftPosition);
-  if (!leftPosition || leftPosition > 50) {
-    $('#menu-items').animate({ left: "0%" }, 1400)
+  if (!window.menuOpen) {
+    $('#menu-items').animate({ left: "0%"}, 1400, () => {
+      window.menuOpen = true;
+    });
   }
 });
 
 $('#dropdown').on('mouseout', (e) => {
-  $('#menu-items').animate({ left: "100%" }, 2000);
+  if (window.menuOpen){
+    $('#menu-items').animate({ left: "100%" }, 2000, () => {
+      window.menuOpen = false;
+    });
+  }
 });
 
 $(document).ready(() => {
