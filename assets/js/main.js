@@ -1,14 +1,16 @@
 $('#dropdown').on('mouseover', (e) => {
   $('#menu-items').css('visibility', 'visible');
-  console.log(parseInt($('#menu-items')[0].style.left))
-  if ($('#menu-items')[0].style.left )
-  $('#menu-items').animate({left: "-=200"}, 1400)
-})
+  var leftPosition = parseInt($('#menu-items')[0].style.left)
+  console.log(leftPosition);
+  if (!leftPosition || leftPosition > 50) {
+    $('#menu-items').animate({ left: "0%" }, 1400)
+  }
+});
 
 $('#dropdown').on('mouseout', (e) => {
-  $('#menu-items').css('visibility', 'hidden')
-})
+  $('#menu-items').animate({ left: "100%" }, 2000);
+});
 
 $(document).ready(() => {
-  $('#navbar').animate({opacity: 1}, 1500)
-})
+  $('#navbar').animate({ opacity: 1 }, 1500);
+});
