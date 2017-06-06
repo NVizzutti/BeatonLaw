@@ -1,6 +1,21 @@
 .color-content {
   color: white;
-  background: blue;
+  background-color: blue;
+}
+
+#menu-items {
+  visibility: hidden;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  list-style: none;
+  background-color: white;
+  color: black;
+}
+
+#menu-items li {
+  display: block;
+  text-align: center;
 }
 
 #dropdown {
@@ -14,6 +29,7 @@
 }
 
 #navbar {
+  opacity: 0.2;
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
