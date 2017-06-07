@@ -22,15 +22,20 @@ const toggleMenu = () => {
   }
 }
 
-const slideImage = (idx) => {
-  var headlines = ["New_Orleans_01.jpg", "portrait.jpg"];
-  if (idx > headlines.length - 1) {
-    idx = 0;
-  }
-  var currentSrc = headlines[idx];
-  // $("#home-img").attr("src", `assets/images/${currentSrc}`);
-  $('#headline').html(`${currentSrc}`);
-  setTimeout(() => slideImage(idx + 1), 5000);
+const toggleHeadline = (idx, bit) => {
+  var zeroOne = bit === false ? 0 : 1;
+  var duration = zeroOne === 1 ? 5000 : 1500;
+  $('#headline').fadeTo('slow', `${zeroOne}`, () => {
+    var headlines = ["New_Orleans_01.jpg", "portrait.jpg", "headline2"];
+    if (idx > headlines.length - 1) {
+      idx = 0;
+    }
+    var currentSrc = headlines[idx];
+    if (zeroOne === 0){
+      $('#headline').html(`${currentSrc}`);
+    }
+  })
+  setTimeout(() => toggleHeadline((idx + 1), !bit), duration);
 }
 
 $('#dropdown').on('click', (e) => {
@@ -38,6 +43,6 @@ $('#dropdown').on('click', (e) => {
 });
 
 $(document).ready(() => {
+  setTimeout(() => toggleHeadline(0, false), 5000);
   $('#home-img').fadeTo(2000, 1);
-  slideImage(0)
 });
