@@ -4,10 +4,10 @@
 }
 
 #menu-items {
-  visibility: hidden;
+  /*visibility: hidden;*/
   padding: 5px;
+  right: 0px;
   position: absolute;
-  right: 0;
   list-style: none;
   background-color: white;
   color: black;

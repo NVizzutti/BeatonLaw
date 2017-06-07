@@ -1,20 +1,27 @@
-window.menuOpen = false;
-$('#dropdown').on('mouseover', (e) => {
-  console.log(window.menuOpen);
-  $('#menu-items').css('visibility', 'visible');
-  if (!window.menuOpen) {
-    $('#menu-items').animate({ left: "0%"}, 1400, () => {
-      window.menuOpen = true;
-    });
-  }
-});
 
-$('#dropdown').on('mouseout', (e) => {
-  if (window.menuOpen){
-    $('#menu-items').animate({ left: "100%" }, 2000, () => {
-      window.menuOpen = false;
-    });
+//toggle menu animation, do not fire if animation in progress
+$('#menu-items').data('open', false);
+const toggleMenu = () => {
+  if ($('#menu-items').data('moving')) {
+    return;
   }
+  if ($('#menu-items').data('open') === false){
+    $('#menu-items').data('moving', true);
+    $('#menu-items').animate({left: '50%', visibility: 'visible'}, 1400, () => {
+      $('#menu-items').data('open', true);
+      $('#menu-items').data('moving', false);
+    });
+  } else {
+    $('#menu-items').data('moving', true);
+    $('#menu-items').animate({left: '100%', visibility: 'hidden'}, 1400, () => {
+      $('#menu-items').data('open', false);
+      $('#menu-items').data('moving', false);
+    })
+  }
+}
+
+$('#dropdown').on('click', (e) => {
+  toggleMenu();
 });
 
 $(document).ready(() => {
