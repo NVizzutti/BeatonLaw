@@ -1,8 +1,17 @@
 .color-content {
   color: white;
-  background-color: blue;
+  background-color: #3a381c;
 }
 
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
+.img-large {
+  height: 80%;
+  width: 80%;
+}
 #menu-items {
   /*visibility: hidden;*/
   display: none;
@@ -29,8 +38,11 @@
   margin: 10px;
 }
 
-#navbar {
+#home-img {
   opacity: 0.2;
+}
+
+#navbar {
   display: flex;
   justify-content: space-between;
   vertical-align: middle;

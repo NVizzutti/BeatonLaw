@@ -22,10 +22,22 @@ const toggleMenu = () => {
   }
 }
 
+const slideImage = (idx) => {
+  var headlines = ["New_Orleans_01.jpg", "portrait.jpg"];
+  if (idx > headlines.length - 1) {
+    idx = 0;
+  }
+  var currentSrc = headlines[idx];
+  // $("#home-img").attr("src", `assets/images/${currentSrc}`);
+  $('#headline').html(`${currentSrc}`);
+  setTimeout(() => slideImage(idx + 1), 5000);
+}
+
 $('#dropdown').on('click', (e) => {
   toggleMenu();
 });
 
 $(document).ready(() => {
-  $('#navbar').animate({ opacity: 1 }, 1500);
+  $('#home-img').fadeTo(2000, 1);
+  slideImage(0)
 });
