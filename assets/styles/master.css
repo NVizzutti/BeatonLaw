@@ -5,6 +5,7 @@
 
 #menu-items {
   /*visibility: hidden;*/
+  display: none;
   padding: 5px;
   right: 0px;
   position: absolute;

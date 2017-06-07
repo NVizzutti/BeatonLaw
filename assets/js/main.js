@@ -7,14 +7,16 @@ const toggleMenu = () => {
   }
   if ($('#menu-items').data('open') === false){
     $('#menu-items').data('moving', true);
-    $('#menu-items').animate({left: '50%', visibility: 'visible'}, 1400, () => {
+    $('#menu-items').css({'display':'block'});
+    $('#menu-items').animate({left: '50%'}, 1400, () => {
       $('#menu-items').data('open', true);
       $('#menu-items').data('moving', false);
     });
   } else {
     $('#menu-items').data('moving', true);
-    $('#menu-items').animate({left: '100%', visibility: 'hidden'}, 1400, () => {
+    $('#menu-items').animate({left: '100%'}, 1400, () => {
       $('#menu-items').data('open', false);
+      $('#menu-items').css({'display':'none'});
       $('#menu-items').data('moving', false);
     })
   }
