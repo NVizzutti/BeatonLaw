@@ -1,0 +1,12 @@
+.center-content p {
+  animation: slide 2s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
