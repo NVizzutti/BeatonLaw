@@ -44,5 +44,4 @@ $('#navbar > section:last-child').on('click', (e) => {
 
 $(document).ready(() => {
   setTimeout(() => toggleHeadline(0, false), 5000);
-  $('#home-img').fadeTo(2000, 1);
 });

@@ -42,10 +42,6 @@
   margin: 10px;
 }
 
-#home-img {
-  opacity: 0.2;
-}
-
 #navbar {
   display: flex;
   justify-content: space-between;
