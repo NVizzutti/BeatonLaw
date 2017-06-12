@@ -13,14 +13,14 @@
 
 @keyframes fadeIn {
   0% {
-    opacity: 0.2;
+    opacity: 0;
   }
 
   100% {
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 
 #home-img {
-  animation: fadeIn 2s;
+  animation: fadeIn 4s;
 }

@@ -1,3 +1,23 @@
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+p, h1, h2, h3, h4, article, body, html {
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  margin: 10px;
+}
+
+.main-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 .color-content {
   color: white;
   background-color: #3a381c;
@@ -14,7 +34,11 @@
 
 .img-large {
   height: 80%;
-  width: 80%;
+  width: 100%;
+}
+
+.margin-10 {
+  margin: 10px;
 }
 
 #menu-items {
@@ -32,9 +56,6 @@
   text-align: center;
 }
 
-.margin-10 {
-  margin: 10px;
-}
 
 #navbar > section {
   text-align: center;
@@ -43,7 +64,16 @@
 }
 
 #navbar {
+  height: 100px;
   display: flex;
   justify-content: space-between;
-  vertical-align: middle;
+  font-family: serif;
+}
+
+#headline {
+  font-size: 3em;
+  font-family: serif;
+  color: white;
+  position: relative;
+  bottom: 100px;
 }
