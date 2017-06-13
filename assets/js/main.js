@@ -39,7 +39,7 @@ const toggleHeadline = (idx, bit) => {
   setTimeout(() => toggleHeadline((idx + 1), !bit), duration);
 }
 
-$('#navbar > section:last-child').on('click', (e) => {
+$('#dropdown a').on('click', (e) => {
   toggleMenu();
 });
 
