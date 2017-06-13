@@ -2,6 +2,7 @@
 //toggle menu animation, do not fire if animation in progress
 $('#menu-items').data('open', false);
 const toggleMenu = () => {
+  // This should be done with addClass() for optimization purposes
   if ($('#menu-items').data('moving')) {
     return;
   }
