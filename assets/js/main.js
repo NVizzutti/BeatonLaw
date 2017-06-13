@@ -7,7 +7,7 @@ const toggleMenu = () => {
   }
   if ($('#menu-items').data('open') === false){
     $('#menu-items').data('moving', true);
-    $('#menu-items').css({'display':'block'});
+    $('#menu-items').css({'display':'flex'});
     $('#menu-items').animate({left: '50%'}, 1400, () => {
       $('#menu-items').data('open', true);
       $('#menu-items').data('moving', false);
@@ -26,7 +26,8 @@ const toggleHeadline = (idx, bit) => {
   var zeroOne = bit === false ? 0 : 1;
   var duration = zeroOne === 1 ? 5000 : 1500;
   $('#headline').fadeTo('slow', `${zeroOne}`, () => {
-    var headlines = ["New_Orleans_01.jpg", "portrait.jpg", "headline2"];
+    var headlines = ["Business & Commercial Law", "Real Estate Transactions",
+     "Commercial Transactions", "Real Estate & Leasing"];
     if (idx > headlines.length - 1) {
       idx = 0;
     }
