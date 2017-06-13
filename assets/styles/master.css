@@ -94,6 +94,7 @@ article.main-content {
 }
 
 #menu-items li:hover {
+  color: black;
   background-color: white;
 }
 
