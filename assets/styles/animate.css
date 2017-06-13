@@ -2,9 +2,13 @@
   animation: slide 2s;
 }
 
+article.main-content {
+  animation: slide 2s;
+}
+
 @keyframes slide {
     0% {
-        transform: translateX(100px);
+        transform: translateX(300px);
     }
     100% {
         transform: translateX(0px);
@@ -17,10 +21,10 @@
   }
 
   100% {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
 #home-img {
-  animation: fadeIn 4s;
+  animation: fadeIn 3s;
 }
