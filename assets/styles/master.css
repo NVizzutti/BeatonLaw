@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   overflow-x: hidden;
+  background: #232219;
 }
 
 p, h1, h2, h3, h4, article, body, html {
