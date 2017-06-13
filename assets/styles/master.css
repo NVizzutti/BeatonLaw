@@ -4,6 +4,10 @@ body {
   background: #232219;
 }
 
+a {
+  color: white;
+}
+
 p, h1, h2, h3, h4, article, body, html, a, ul, li {
   text-decoration: none;
   margin: 0;
@@ -62,11 +66,11 @@ article.main-content {
 
 #menu-items {
   display: none;
+  border-radius: 5px;
   flex-direction: column;
   justify-content: space-around;
   font-size:
   color: black;
-  padding: 5px;
   right: 0px;
   height: 30%;
   z-index: 10;
@@ -77,13 +81,20 @@ article.main-content {
 }
 
 #menu-items li {
+  background-color: black;
   height: 100%;
   display: block;
   text-align: center;
 }
 
 #menu-items li:nth-child(2n) {
-  background-color: grey;
+  background-color: rgb(35, 34, 25);
+}
+
+#menu-items a {
+  opacity: 1;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
