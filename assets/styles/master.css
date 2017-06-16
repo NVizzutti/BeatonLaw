@@ -63,7 +63,7 @@ article.main-content {
   margin: 10px;
 }
 
-#dropdown > a {
+#dropdown {
   color: white;
   font-size: 50px;
 }
@@ -73,7 +73,6 @@ article.main-content {
   border-radius: 5px;
   flex-direction: column;
   justify-content: space-around;
-  font-size:
   color: black;
   right: 0px;
   top: 120px;
@@ -81,19 +80,20 @@ article.main-content {
   z-index: 10;
   position: absolute;
   list-style: none;
-  color: black;
 }
 
 #menu-items li {
+  color: white;
+  font: 'Open Sans';
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
-  line-height: 3em;
+  line-height: 4rem;
   height: 100%;
   display: block;
   text-align: center;
 }
 
-#menu-items a:nth-child(2n) {
+#menu-items li:nth-child(2n) {
   background-color: rgba(35, 34, 25, 0.8);
 }
 
@@ -102,8 +102,8 @@ article.main-content {
   background-color: #cecece;
 }
 
-#menu-items a {
-  font-size: 1.5em;
+#menu-items li {
+  font-size: 1.3rem;
   margin-top: auto;
   margin-bottom: auto;
 }
