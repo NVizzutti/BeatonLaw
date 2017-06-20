@@ -107,7 +107,7 @@ article.main-content {
 }
 
 #menu-items li {
-  max-height: 20px;
+  max-height: 80px;
   margin-top: auto;
   margin-bottom: auto;
 }
