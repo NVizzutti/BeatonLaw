@@ -13,6 +13,10 @@ a {
   color: white;
 }
 
+small {
+  font-size: 20px;
+}
+
 p, h1, h2, h3, h4, article, body, html, a, ul, li {
   text-decoration: none;
   margin: 0;
@@ -103,9 +107,14 @@ article.main-content {
 }
 
 #menu-items li {
-  font-size: 1.3rem;
+  max-height: 20px;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+#menu-items li > small {
+  width: 100%;
+/*prevent items from dropping to next line*/
 }
 
 
